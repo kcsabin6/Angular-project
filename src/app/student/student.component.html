@@ -1,0 +1,16 @@
+<hr style="border-top: 5px solid rgba(103,58,183,1);"/>
+<img id="studentImage"  src="assets/student.png" class="semere"  style="height: 200px;">
+<form  name="authform" action="auth" method="post">
+    <div  class="semere"   style="width: 50%">
+     <span  id="message"  style="color:red;font-size: 16px;font-weight: bold;">
+       <marquee scrolldelay="100" direction="left">{{message}}</marquee>  
+     </span>
+
+     <label for="username">Message from child (for Parent) : </label>
+                 <input #username1 type="text" name="username" class="form-control" id="username1" >
+                   <br/>
+                   <button type="button" class="btn btn-warning" (click)="processUsername(username1);">Push</button> &nbsp;&nbsp;
+
+       <hr/>
+       </div>
+       </form>

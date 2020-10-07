@@ -1,0 +1,21 @@
+
+<app-header></app-header>
+  <div  class="container">
+  <h2>{{welcome}}</h2>
+     
+     <app-student [pmessage]="message" (updateMessage)="changeMessage($event)"></app-student>
+                  <br/><span  id="emessage"  style="color:blue;font-size: 16px;font-weight: bold;">
+                    {{message}}
+      </span><br/>
+                 <label for="username">Username</label>
+                 <input #username type="text" name="username" class="form-control" id="username" >
+                   <br/>
+                    <label>Password</label>
+                 <input #password type="password" name="password" class="form-control" id="password" >
+                  <br/>
+     <button type="button" class="btn btn-primary" (click)="authUser(username,password);">Sign In</button> &nbsp;&nbsp;
+     <a href="signup.jsp"><button type="button" class="btn btn-info">Sign Up</button></a>&nbsp;&nbsp;
+     <a href="forgotPassword.jsp"><button type="button" class="btn btn-primary">{{btnMessage}}</button></a>
+     </div>
+     
+ 
